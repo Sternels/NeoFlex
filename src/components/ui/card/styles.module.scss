@@ -1,0 +1,48 @@
+.card {
+	background-color: $white-color;
+	border-radius: $border-radius;
+	padding: $padding;
+	width: 100%;
+	box-shadow: 0 0 10px 5px #55555523;
+	box-sizing: border-box;
+
+	.card__content {
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		gap: 20px;
+
+
+		.card__discription {
+			display: flex;
+			align-items: start;
+			justify-content: space-between;
+			// place-self: stretch;
+
+
+			h4{
+                color: $secondary-color;
+			}
+		}
+	}
+
+	.card__footer{
+		display: flex;
+        flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.vertical {
+		flex-direction: column;
+		place-self: center;
+
+	}
+	
+	.horizontal {
+		place-self: stretch;
+		flex-direction: row;
+	}
+}
+
+

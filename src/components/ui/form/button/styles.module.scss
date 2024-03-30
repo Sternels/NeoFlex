@@ -1,0 +1,12 @@
+.button{
+    background-color: #101010;
+    padding: $padding;
+    color: $white-color;
+    border-radius: $border-radius;
+    width: 100%;
+
+    &:hover{
+        transition: all 0.2s;
+        background-color: #414040;
+    }
+}

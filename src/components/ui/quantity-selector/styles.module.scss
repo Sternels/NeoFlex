@@ -1,0 +1,22 @@
+.quantity_selector{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h4{
+        width: 20px;
+        text-align: center;
+    }
+
+    .quantity_selector__icon{
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondary-color;
+        cursor: pointer;
+        border: 0px;
+    }
+}

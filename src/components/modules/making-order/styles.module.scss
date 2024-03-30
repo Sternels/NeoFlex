@@ -1,0 +1,13 @@
+.making_order__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    gap: 20px;
+    box-sizing: border-box;
+
+    @media (max-width: 750px) {
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: center;
+    }
+}

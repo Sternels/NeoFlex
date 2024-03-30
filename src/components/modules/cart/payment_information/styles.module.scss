@@ -1,0 +1,25 @@
+.payment_information__container{
+    padding: $padding;
+    width: 50%;
+    box-sizing: border-box;
+
+    .payment_information__card{
+        height: 150px;
+        position: sticky;
+        top: 5%;
+    }
+
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+
+    .payment_information__footer{
+        width: 100%;
+
+        button{
+            left: 0;
+            height: 80px;
+            position: absolute;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.cart_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;   
+    height: 100%;
+    position: relative;
+    
+    @media (max-width: 750px) {
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: center;
+    }
+}

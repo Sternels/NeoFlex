@@ -1,0 +1,25 @@
+.product_catalog_item___content {
+	display: flex;
+	flex-direction: column;
+
+	.product_catalog_item___image {
+		margin: auto;
+		height: 250px;
+	}
+}
+
+.product_catalog_item___caption,
+.product_catalog_item___footer {
+	display: flex;
+	justify-content: space-between;
+
+	div {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		h4 {
+			margin: 0;
+		}
+	}
+}

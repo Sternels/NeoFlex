@@ -1,0 +1,55 @@
+@import "normalize";
+@import "fonts";
+@import "vars";
+html {
+	height: 100vh;
+}
+body,
+html {
+	color: $text-primary-color;
+	background-color: $background-color;
+	font-family: montserrat;
+}
+
+.content {
+	flex-grow: 1;
+	padding: $padding;
+}
+
+a {
+	color: $text-secondary-color;
+	text-decoration: none;
+	
+	&:hover {
+		color: $secondary-color;
+	}
+}
+
+.pointer {
+	cursor: pointer;
+
+	&:hover {
+		color: $secondary-color;
+	}
+}
+
+.p_relative{
+	position: relative;
+}
+
+.secondary_text {
+	color: $secondary-color;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px gray;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: gray;
+	border-radius: 10px;
+}
