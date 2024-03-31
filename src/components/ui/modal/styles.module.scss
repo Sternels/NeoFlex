@@ -1,0 +1,23 @@
+.modal__back {
+	position: absolute;
+    top: 0;
+    left: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 5;
+	display: grid;
+	place-items: center;
+	background-color: rgba(0, 0, 0, 0.322);
+}
+
+.modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 30%;
+	max-width: 60%;
+	background-color: $white-color;
+	padding: $padding;
+	border-radius: $border-radius;
+}

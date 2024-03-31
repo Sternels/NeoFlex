@@ -1,4 +1,4 @@
-import { Button, Input } from "components/ui";
+import { Button, Input} from "components/ui";
 import React, { FC } from "react";
 import { useAppDispatch } from "app/store/hooks";
 import { Order } from "app/store/reducers";

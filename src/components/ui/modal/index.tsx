@@ -1,6 +1,7 @@
 import React, { FC, PropsWithChildren, ReactElement } from "react";
 import { Content, IContentProps } from "./content";
 import { Footer, IFooterProps } from "./footer";
+import { Header } from "./header";
 
 import styles from "./styles.module.scss";
 
@@ -14,18 +15,25 @@ type ModalExtentions = {
 interface ModalProps extends PropsWithChildren {
 	classNames?: string[];
 	children?: ReactElement<ModalItemType> | ReactElement<ModalItemType>[];
-    active?: boolean;
-    setActive(active: boolean): void;
+	handlerClose: () => void;
+	title?: string;
 }
 
-export const Modal: FC<ModalProps> & ModalExtentions = ({
+export const Modal: FC<ModalProps> = React.memo(({
 	classNames = [],
 	children,
+	handlerClose,
+	title,
 }) => {
 	return (
-		<div className={[...classNames, styles.modal].join(" ")}>{children}</div>
+		<div className={styles.modal__back}>
+			<div className={[...classNames, styles.modal].join(" ")}>
+				<Header handlerClose={handlerClose} title={title} />
+				{children}
+			</div>
+		</div>
 	);
-};
+});
 
-Modal.Content = Content;
-Modal.Footer = Footer;
+// Modal.Content = Content;
+// Modal.Footer = Footer;

@@ -1,0 +1,10 @@
+.modal__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .modal__header_btn_close{
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
