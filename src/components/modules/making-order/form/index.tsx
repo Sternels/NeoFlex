@@ -6,19 +6,21 @@ import useLocalStorage from "hooks/useLocalStorage";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./styles.module.scss";
+import { useSnackbar } from "hooks/useSnackbar";
 
 export interface FormMakingOrderProps {}
 
 export const FormMakingOrder: FC<FormMakingOrderProps> = ({}) => {
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
+	const {showSnackbar} = useSnackbar()
 	const { resetCart } = useLocalStorage("orders");
 
 	const handlerForm = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		resetCart();
 		dispatch(Order.orderSlice.actions.resetCart());
-		alert("Ваш заказ успешно оформлен!")
+		showSnackbar('Ваш заказ успешно оформлен!')
 		setTimeout(() => {
 			navigate("/", { replace: true });
 		}, 1000);
