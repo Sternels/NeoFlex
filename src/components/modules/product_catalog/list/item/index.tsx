@@ -4,8 +4,10 @@ import { FC } from "react";
 import { useAppDispatch } from "app/store/hooks";
 import { Order } from "app/store/reducers";
 import vector from "assets/icons/Vector.svg";
-import styles from "./styles.module.scss";
 import { OrderAPI } from "services";
+import { useSnackbar } from "hooks/useSnackbar";
+
+import styles from "./styles.module.scss";
 
 interface ProductItemProps {
 	item: IProduct;
@@ -13,16 +15,17 @@ interface ProductItemProps {
 
 const ProductItem: FC<ProductItemProps> = ({ item }) => {
 	const dispatch = useAppDispatch();
+	const { showSnackbar } = useSnackbar();
 
 	const handlerClick = async () => {
 		await OrderAPI.postOrder(item)
 			.then((_) => {
-				alert(`Товар ${item.title} добавлен в корзину!`)
 				dispatch(Order.orderSlice.actions.incrementOrder(item));
+				showSnackbar(`Товар ${item.title} добавлен в корзину!`);
 			})
-			.catch((reject) => alert(reject.message));
-	};
-
+			.catch((reject) => showSnackbar(reject.message));
+		};
+		
 	return (
 		<Card>
 			<Card.Content>
