@@ -3,7 +3,6 @@ import { ProductItem } from "./item";
 import { generateKey } from "utils";
 import { Loading } from "components/ui";
 import { useAppSelector } from "app/store/hooks";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import styles from "./styles.module.scss";
 

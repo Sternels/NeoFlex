@@ -1,10 +1,9 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import cart from "assets/icons/cart.svg";
 import favourites from "assets/icons/favourites.svg";
-import { useAppDispatch, useAppSelector } from "app/store/hooks";
+import { useAppSelector } from "app/store/hooks";
 import { ProductList } from "components/modules/cart/list";
 import { Link } from "react-router-dom";
-import { getOrdersAction } from "app/store/actions/order";
 
 import styles from "./styles.module.scss";
 import { Button } from "components/ui/form/button";
@@ -14,12 +13,7 @@ export interface IHeaderProps {}
 export const Header: FC<IHeaderProps> = ({}) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
-	const dispatch = useAppDispatch();
 	const { count, mainPrice } = useAppSelector((state) => state.orderReducer);
-
-	useEffect(() => {
-		dispatch(getOrdersAction());
-	}, []);
 
 	return (
 		<div className={styles.header}>
