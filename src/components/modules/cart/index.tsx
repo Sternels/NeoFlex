@@ -1,13 +1,12 @@
 import { FC } from "react";
 import { ProductList } from "./list";
 import { PaymentInformation } from "./payment_information";
-import { CartHOC } from "hocs";
 
 import styles from "./styles.module.scss";
 
 export interface ICartBaseProps {}
 
-export const CartBase: FC<ICartBaseProps> = ({}) => {
+export const Cart: FC<ICartBaseProps> = ({}) => {
 	return (
 		<>
 			<h2>Корзина</h2>
@@ -19,5 +18,3 @@ export const CartBase: FC<ICartBaseProps> = ({}) => {
 	);
 };
 
-
-export const Cart = CartHOC(CartBase) as typeof CartBase;
