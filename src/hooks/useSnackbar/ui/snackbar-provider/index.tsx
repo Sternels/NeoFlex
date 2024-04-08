@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 import styles from "./styles.module.scss";
 import { SnackbarQueue } from "components/ui/snackbar";
 

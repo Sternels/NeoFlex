@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import {FC} from 'react'
 import { Card } from 'components/ui'
 import { FormMakingOrder } from './form'
 import { DetailMakingOrder } from './detail'

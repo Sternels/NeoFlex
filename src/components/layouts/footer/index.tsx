@@ -1,4 +1,3 @@
-import { FC } from "react";
 import styles from "./styles.module.scss";
 import globus_icon from "assets/icons/globus.svg";
 import telegram_icon from "assets/icons/Telegram.svg";
@@ -6,11 +5,7 @@ import vk_icon from "assets/icons/VK.svg";
 import whatsapp_icon from "assets/icons/Whatsapp.svg";
 import { Link } from "react-router-dom";
 
-export interface IFooterProps {
-	className?: string;
-}
-
-export const Footer: FC<IFooterProps> = ({ className = "" }) => {
+export const Footer = () => {
 	return (
 		<div className={styles.footer}>
 			<Link to="/">

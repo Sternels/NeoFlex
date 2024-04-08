@@ -1,5 +1,5 @@
 import { useAppSelector } from 'app/store/hooks'
-import React, {FC} from 'react'
+import {FC} from 'react'
 import { generateKey } from 'utils'
 
 import styles from './styles.module.scss'

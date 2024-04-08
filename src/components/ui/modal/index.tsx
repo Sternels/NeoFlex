@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren, ReactElement } from "react";
+import { FC, PropsWithChildren, ReactElement } from "react";
 import { Content, IContentProps } from "./content";
 import { Footer, IFooterProps } from "./footer";
 
